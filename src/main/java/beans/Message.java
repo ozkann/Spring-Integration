@@ -17,6 +17,9 @@ public class Message {
 		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Welcome >-"+userName));
 		
 		
+		BasicConfigurator.configure();
+	
+		log.info(userName+"\t"+"has triggered to Message method");
 	}
 	
 	

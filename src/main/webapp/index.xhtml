@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3c.org/1999/xhtml"
-xmlns:h="http://java.sun.com/jsf/html">
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core"
+xmlns:p="http://primefaces.org/ui"
+xmlns:ui="http://java.sun.com/jsf/facelets">
 
 <h:head>
 </h:head>
 <h:body>
 
-<h2>#{messageBean.getMessage()}</h2>
-            
+<h:form id="user">
+<p:growl id="msg"/>
+<p:panelGrid columns="3">
+
+ 
+ <p:outputLabel for="user" value="User Name:" />
+ <p:inputText id="user" value="#{user.name}"></p:inputText>
+ <p:commandButton value="click" action="#{msgBean.getMessage(user)}" update="msg" ajax="true"/> 
+
+
+</p:panelGrid>
+</h:form>         
       
 
 </h:body>

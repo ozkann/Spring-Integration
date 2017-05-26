@@ -1,7 +1,11 @@
 package beans;
 
 import javax.faces.application.FacesMessage;
+
 import javax.faces.context.FacesContext;
+
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Component;
 
 @Component("msgBean")

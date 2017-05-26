@@ -1,15 +1,21 @@
 package beans;
 
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
 import org.springframework.stereotype.Component;
 
-@Component("messageBean")
+@Component("msgBean")
 public class Message {
 
-	private String message = "JSF + SPRING INTEGRATION ";
 	
-	public String  getMessage(){
+	
+	public void getMessage(User u){
 		
-		return message;
+		
+		String userName = u.getName();
+				
+		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Welcome >-"+userName));
+		
 		
 	}
 	

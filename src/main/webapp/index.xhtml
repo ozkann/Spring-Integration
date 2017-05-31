@@ -9,7 +9,7 @@ xmlns:ui="http://java.sun.com/jsf/facelets">
 </h:head>
 <h:body>
 
-<h:form>
+<h:form id="user">
 <p:growl id="msg"/>
 <p:panelGrid columns="3">
 
@@ -20,6 +20,14 @@ xmlns:ui="http://java.sun.com/jsf/facelets">
 
 
 </p:panelGrid>
+<p:panel id="chart" style="margin-top:15px;"> 
+
+	<h:panelGrid columns="1" columnClasses="left,right" style="height:100%;width:100%">
+    	<p:chart type="bar" model="#{chartBean.animatedModel2}" style="width:100%;height:400px" />
+	</h:panelGrid>
+	
+	
+</p:panel>
 </h:form>         
       
 
